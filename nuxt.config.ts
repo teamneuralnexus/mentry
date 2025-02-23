@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     githubClientSecret: '',
     githubClientId: '',
     googleClientSecret: '',
-    googleClientId: ''
+    googleClientId: '',
+    falKey: ''
   },
 
   modules: ["@nuxtjs/tailwindcss"]
