@@ -1,7 +1,7 @@
 <template>
   <div class="mx-auto p-8 text-center bg-[#E5E4DF] w-full h-screen">
     <h1 class="text-4xl font-bold mb-8 text-[#CC785C]">
-      Welcome to Story with Horizon, {{ user.name }}! ✨
+      Welcome to Mentry, {{ user.name }}! ✨
     </h1>
 
     <div class="my-8">
