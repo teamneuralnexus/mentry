@@ -92,6 +92,7 @@ const currentChapter = computed(() => {
 
 const isStoryEnded = computed(() => {
   if (currentChapter.value?.content) {
+    console.log(currentChapter.value.content)
     return currentChapter.value.content.includes("<end_story>");
   }
   return false;

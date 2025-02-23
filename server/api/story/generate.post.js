@@ -17,7 +17,7 @@ export default defineEventHandler(async (event) => {
         Mood: ${mood}
         Feeling: ${feeling}
         
-        Generate the first chapter of the story along with the a detailed summary of complete story and title at first. Do NOT use bold or markdown just normal text without even quotes or anything just in the format I told you to.
+        Generate the first chapter of the story along with the a detailed summary of complete story and title at first. Do NOT use bold or markdown just normal text without even quotes or anything just in the format I told you to. STICK TO THE FORMAT.
         Format: 
         Title: <title of the story>
         Summary: <summary>
@@ -27,7 +27,7 @@ export default defineEventHandler(async (event) => {
         const title = result.match(/Title: (.*?)Summary:/s)?.[1]?.trim();
         const summary = result.match(/Summary: (.*?)First Chapter:/s)?.[1]?.trim();
         const firstChapter = result.match(/First Chapter: (.*?)$/s)?.[1]?.trim();
-
+		console.log(title, summary, firstChapter)
         // Split firstChapter into segments with roughly equal number of sentences
         const sentenceRegex = /[^.!?]+[.!?]+/g;
         let sentences = firstChapter.match(sentenceRegex) || [firstChapter];

@@ -9,7 +9,7 @@ export const generateCompletion = async (userMessage) => {
           Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtYW5hbmFwZWVqYXlAZ21haWwuY29tIn0.vWoMikICbnjyC_EvnG3LFk4KEzjZxBMKSs616bZkl84',
         },
         body: JSON.stringify({
-          model: 'meta-llama/Meta-Llama-3.1-8B-Instruct',
+          model: 'meta-llama/Llama-3.3-70B-Instruct',
           messages: [
             {
               role: 'user',
