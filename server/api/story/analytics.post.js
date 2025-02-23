@@ -5,19 +5,19 @@ export default defineEventHandler(async (event) => {
         statusCode: 401,
       });
     }
-  
+    
     const userId = event.context.user.id;
-    // Retrieve stories for the authenticated user, ordered by creation date
+    // Query total stories grouped by mood
     const result = await pool.query(
-      `SELECT story_id, title, summary, mood, feeling, created_at
-       FROM stories
-       WHERE user_id = $1
-       ORDER BY created_at DESC`,
+      `SELECT mood, COUNT(*) AS count 
+       FROM stories 
+       WHERE user_id = $1 
+       GROUP BY mood`,
       [userId]
     );
-  
+    
     return {
       success: true,
-      stories: result.rows,
+      stats: result.rows,
     };
   });

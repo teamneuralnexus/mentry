@@ -1,75 +1,64 @@
-# Nuxt Minimal Starter
+# Mentry
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Prerequisites
+Before starting, make sure you have [Git](https://git-scm.com/) installed, Python with pip, and Node.js with npm.
 
-## Setup
+## Setup Instructions
 
-Make sure to install dependencies:
+1. **Clone the Repository**
 
-```bash
-# npm
-npm install
+   Open your terminal and run:
 
-# pnpm
-pnpm install
+   ```sh
+   git clone <repository-url>
+   cd horizon
+   ```
 
-# yarn
-yarn install
+2. **Install Python Dependencies**
 
-# bun
-bun install
-```
+   Run the following command to install required Python packages:
 
-## Development Server
+   ```sh
+   pip install -r requirements.txt
+   ```
 
-Start the development server on `http://localhost:3000`:
+3. **Update Environment Variables**
 
-```bash
-# npm
-npm run dev
+   Replace the contents of the **.env** file with the following environment variables:
 
-# pnpm
-pnpm dev
+4. **Install Node Dependencies**
 
-# yarn
-yarn dev
+   Run the following command to install node modules:
 
-# bun
-bun run dev
-```
+   ```sh
+   npm install
+   ```
 
-## Production
+5. **Start the Development Server**
 
-Build the application for production:
+   Run the following command:
 
-```bash
-# npm
-npm run build
+   ```sh
+   npm run dev
+   ```
 
-# pnpm
-pnpm build
+   Then open your browser and navigate to [http://localhost:3000](http://localhost:3000).
 
-# yarn
-yarn build
+## Using the Application
 
-# bun
-bun run build
-```
+1. On the homepage, click **Get Started/ Signup**.
+2. Create an account by signing up.
+3. In the search bar:
+   - Write about your feelings.
+   - Select the emoji for your mood.
+   - Click **Go**.
 
-Locally preview production build:
+   You'll see a loading indication while the story is generated (this may take some time).
 
-```bash
-# npm
-npm run preview
+4. Once the story is generated:
+   - Click **Play Story**.
+   - Click **Next Chapter** to generate subsequent chapters. Note that when the story ends, you won't be able to advance further.
+   - Click **View Stories** to see all generated stories.
+   - On the story page, use the chatbox to enter additional suggestions to alter the forward story. Simply type your suggestion and press **Enter**.
 
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Enjoy generating and exploring your unique stories!
